@@ -459,5 +459,15 @@
 <script src="vendor/ScrollTrigger.min.js"></script>
 <script src="app.js"></script>
 <script type="module" src="scene.js"></script>
+<script>
+/* Red de seguridad: si el modulo WebGL no arranca (navegador antiguo, fallo de red o
+   error de modulo), activamos el fondo alternativo en CSS para que la web nunca quede sosa. */
+setTimeout(function () {
+  var b = document.body;
+  if (!b.classList.contains('gl-on') && !b.classList.contains('no-webgl')) {
+    b.classList.add('no-webgl');
+  }
+}, 3200);
+</script>
 </body>
 </html>
