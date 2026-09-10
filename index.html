@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Estudio de uñas Lili | Manicura rusa y uñas de gel en Madrid</title>
+<meta name="description" content="Estudio de uñas Lili en Madrid: manicura rusa con torno y cera, uñas de gel, kapping, esculpidas y polygel. Titulada y con más de 4 años de experiencia. En estudio (Calle San Clemente 8) o a domicilio.">
+<meta name="theme-color" content="#120b10">
+<meta property="og:title" content="Estudio de uñas Lili | Manicura rusa y uñas de gel en Madrid">
+<meta property="og:description" content="Manicura rusa con torno y cera, uñas de gel y diseños a medida. En estudio o a domicilio en Madrid.">
+<meta property="og:type" content="business.business">
+<meta property="og:image" content="assets/lili.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💅</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NailSalon",
+  "name": "Estudio de uñas Lili",
+  "description": "Estudio de manicura en Madrid especializado en manicura rusa con torno y cera, uñas de gel, kapping, esculpidas y polygel. Servicio en estudio y a domicilio.",
+  "image": "assets/lili.jpg",
+  "telephone": "+34681861137",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle San Clemente 8",
+    "addressLocality": "Madrid",
+    "addressCountry": "ES"
+  },
+  "areaServed": { "@type": "City", "name": "Madrid" },
+  "priceRange": "€€",
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Manicura rusa con torno y cera" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Uñas de gel y semipermanente" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kapping y esculpidas con gel" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Polygel y gel tips" } }
+  ]
+}
+</script>
+</head>
+<body class="is-loading">
+<div class="grain" aria-hidden="true"></div>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="gl-fallback" aria-hidden="true"></div>
+
+<!-- ================= PRELOADER ================= -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <span class="loader__mark">LILI</span>
+    <span class="loader__sub">estudio de uñas</span>
+    <span class="loader__bar"><i></i></span>
+  </div>
+</div>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#top" aria-label="Estudio de uñas Lili, inicio">
+    <span class="nav__logo-main">LILI</span>
+    <span class="nav__logo-sub">estudio de uñas</span>
+  </a>
+  <nav class="nav__links" aria-label="Navegación principal">
+    <a href="#servicios">Servicios</a>
+    <a href="#rusa">Manicura rusa</a>
+    <a href="#galeria">Galería</a>
+    <a href="#estudio">Estudio</a>
+    <a href="#faq">Dudas</a>
+  </nav>
+  <a class="btn btn--wa nav__cta" data-wa="Hola Lili, me gustaría pedir cita." href="#reserva">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.9-.3-2-.9-3-1.9s-1.6-2.1-1.9-3c-.2-.7-.2-1.2-.1-1.7.1-.5.7-1.6 1.2-1.8.3-.1.7-.1.9.1.2.2.7 1.2.7 1.4.1.2 0 .4-.1.6-.1.2-.3.4-.4.5-.1.2-.2.3-.1.5.3.6.8 1.2 1.3 1.6.5.4 1 .7 1.6.9.2.1.4 0 .5-.1.2-.2.4-.5.6-.7.2-.2.4-.2.6-.1.2.1 1.2.6 1.4.7.2.1.3.4.2.7Z"/></svg>
+    <span>Pedir cita</span>
+  </a>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="wrap hero__wrap">
+    <div class="hero__copy">
+      <p class="kicker reveal">Estudio de uñas en Madrid · a domicilio</p>
+      <h1 class="hero__title reveal">
+        Manicura rusa
+        <em>y uñas de gel</em>
+        <span class="hero__title-line">hechas al detalle</span>
+      </h1>
+      <p class="hero__text reveal">
+        Torno, cera y producto profesional para una cutícula impecable y un acabado que dura semanas.
+        Cuido tus uñas como si fueran las mías: precisión, higiene y un diseño pensado para ti.
+      </p>
+      <ul class="chips reveal">
+        <li>Titulada y certificada</li>
+        <li>+4 años de experiencia</li>
+        <li>Estudio y a domicilio</li>
+      </ul>
+      <div class="hero__actions reveal">
+        <a class="btn btn--gold" data-wa="Hola Lili, quería información para hacerme las uñas." href="#reserva">Escríbeme por WhatsApp</a>
+        <a class="btn btn--ghost" href="#servicios">Ver servicios</a>
+      </div>
+      <p class="hero__note reveal">Cita previa · <span class="nw">Calle San Clemente 8, Madrid</span></p>
+    </div>
+
+    <figure class="hero__figure reveal">
+      <div class="hero__frame">
+        <img src="assets/lili.webp" alt="Lili, especialista en manicura rusa y uñas de gel en Madrid" width="576" height="1280" fetchpriority="high" decoding="async">
+      </div>
+      <figcaption>
+        <strong>Lili</strong>
+        <span>Nail artist · especialista en técnica rusa</span>
+      </figcaption>
+      <span class="hero__seal" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><defs><path id="circ" d="M50,50 m-34,0 a34,34 0 1,1 68,0 a34,34 0 1,1 -68,0"/></defs><text><textPath href="#circ">manicura rusa · uñas de gel · madrid · </textPath></text></svg>
+      </span>
+    </figure>
+  </div>
+  <a class="hero__scroll" href="#servicios" aria-label="Bajar"><span></span></a>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Manicura rusa</span><i>·</i><span>Uñas de gel</span><i>·</i><span>Kapping</span><i>·</i><span>Esculpidas</span><i>·</i><span>Polygel</span><i>·</i><span>Material esterilizado</span><i>·</i><span>Tu casa o mi estudio</span><i>·</i>
+    <span>Manicura rusa</span><i>·</i><span>Uñas de gel</span><i>·</i><span>Kapping</span><i>·</i><span>Esculpidas</span><i>·</i><span>Polygel</span><i>·</i><span>Material esterilizado</span><i>·</i><span>Tu casa o mi estudio</span><i>·</i>
+  </div>
+</div>
+<!-- ================= SERVICIOS ================= -->
+<section class="section" id="servicios">
+  <div class="wrap">
+    <header class="shead">
+      <p class="kicker reveal">Servicios</p>
+      <h2 class="reveal">Todo lo que puedo hacer por tus uñas</h2>
+      <p class="shead__text reveal">Cada servicio empieza por mirar tu uña natural: grosor, forma, cutícula y rutina. A partir de ahí te propongo lo que mejor le viene, no lo que más se lleva.</p>
+    </header>
+
+    <div class="cards">
+      <article class="card reveal">
+        <span class="card__num">01</span>
+        <h3>Manicura rusa</h3>
+        <p>Preparación en seco con torno y fresas de precisión, limpieza total de cutícula y acabado impecable hasta el borde. La base de todo lo demás.</p>
+        <p class="card__meta">Incluye esmaltado en gel a elegir</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__num">02</span>
+        <h3>Esmaltado semipermanente</h3>
+        <p>Color en gel sobre tu uña natural, con brillo de espejo y larga duración. Para quien quiere ir perfecta sin ganar grosor.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__num">03</span>
+        <h3>Kapping y nivelación</h3>
+        <p>Un baño de gel que refuerza y nivelar la uña natural: corrige crestas, protege si se te rompen y alarga el resultado semanas.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__num">04</span>
+        <h3>Esculpidas con gel</h3>
+        <p>Construcción de la uña con molde y gel: largo, forma y estructura a tu medida. Almendra, cuadrada, ovalada o la que quieras.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__num">05</span>
+        <h3>Polygel</h3>
+        <p>La mezcla de gel y acrílico: ligero como un gel y resistente como una acrílica. Ideal si buscas un extra de fuerza sin peso.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__num">06</span>
+        <h3>Gel tips y soft gel</h3>
+        <p>Extensiones listas con acabado natural para alargar sin apenas material. Rápidas, cómodas y muy naturales.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__num">07</span>
+        <h3>Diseño y nail art</h3>
+        <p>Francesa, babyboomer, cromados, encapsulados, efecto aura, piedras o línea fina. Trae tu idea y la aterrizamos juntas.</p>
+      </article>
+      <article class="card reveal">
+        <span class="card__num">08</span>
+        <h3>Mantenimiento y retirada</h3>
+        <p>Relleno de tu trabajo cada 3 o 4 semanas y retirada cuidada, sin arrancar ni castigar la uña natural.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MANICURA RUSA: TIPOS + PROCESO ================= -->
+<section class="section section--deep" id="rusa">
+  <div class="wrap">
+    <header class="shead">
+      <p class="kicker reveal">La técnica</p>
+      <h2 class="reveal">Qué es la manicura rusa y<br>por qué se nota tanto</h2>
+      <p class="shead__text reveal">No es un color, es una forma de preparar la uña. Se trabaja <strong>en seco, con torno eléctrico y fresas específicas</strong>, más cera para exfoliar y limpiar la cutícula sin agredir la piel. El resultado: el color llega hasta la cutícula y no hay ni un borde visible.</p>
+    </header>
+
+    <div class="coins reveal">
+      <div class="coin"><b>75-120 min</b><span>Duración de la cita</span></div>
+      <div class="coin"><b>3-4 semanas</b><span>De duración real</span></div>
+      <div class="coin"><b>Sin agua</b><span>Ni acetona agresiva</span></div>
+      <div class="coin"><b>10 uñas</b><span>Forma idéntica</span></div>
+    </div>
+
+    <h3 class="subhead reveal">Tipos de uña que trabajamos</h3>
+    <div class="types">
+      <article class="type reveal">
+        <h4>Manicura rusa</h4>
+        <p class="type__for">Para uñas con cutícula difícil, crestas o cuando quieres un acabado de revista.</p>
+        <p>Se limpia y se afina la cutícula con torno y cera, se nivela la lámina y el color se aplica hasta el nacimiento. Dura más porque la base está perfecta.</p>
+      </article>
+      <article class="type reveal">
+        <h4>Kapping (baño de gel)</h4>
+        <p class="type__for">Para uñas naturales que se doblan, se rompen o tienen crestas.</p>
+        <p>Una capa de gel que refuerza sin alargar. Se mantiene con relleno cada 3 a 4 semanas y protege tu uña de verdad.</p>
+      </article>
+      <article class="type reveal">
+        <h4>Esculpidas con gel</h4>
+        <p class="type__for">Para ganar largo y forma, o cuando la uña natural no da más de sí.</p>
+        <p>Se construye la estructura con molde y gel: el largo, la curva y la forma se esculpen a mano. Resistentes y con aspecto natural si se pide un largo discreto.</p>
+      </article>
+      <article class="type reveal">
+        <h4>Polygel</h4>
+        <p class="type__for">Para quien quiere máxima resistencia con poco peso.</p>
+        <p>Se aplica como un gel y cura como un acrílico. Muy cómodo en largos medios y en uñas que sufren con el día a día.</p>
+      </article>
+    </div>
+
+    <div class="process">
+      <div class="process__intro">
+        <p class="kicker reveal">Paso a paso</p>
+        <h3 class="reveal">Cómo hago una manicura rusa</h3>
+        <p class="reveal">Un protocolo fijo, con material esterilizado y sin atajos. Lo que ves aquí es literalmente el orden en el que trabajo.</p>
+        <a class="btn btn--wa reveal" data-wa="Hola Lili, me interesa la manicura rusa. ¿Tienes hueco?" href="#reserva">Quiero una rusa</a>
+      </div>
+      <ol class="steps">
+        <li class="step reveal"><span>01</span><h4>Diagnóstico</h4><p>Miro tu uña y tu piel, te pregunto por tu rutina y decidimos juntas el servicio y el largo.</p></li>
+        <li class="step reveal"><span>02</span><h4>Preparación en seco</h4><p>Sin remojo. Retiro el producto anterior con torno y preparo la lámina sin castigarla.</p></li>
+        <li class="step reveal"><span>03</span><h4>Cera y exfoliación</h4><p>La cera ablanda y limpia la zona de cutícula: arrastra piel muerta e impurezas sin dañar la piel sana.</p></li>
+        <li class="step reveal"><span>04</span><h4>Cutícula al milímetro</h4><p>Fresas de precisión para levantar, adelgazar y dejar el borde limpio. Pulcro, sin cortes y sin dolor.</p></li>
+        <li class="step reveal"><span>05</span><h4>Estructura y color</h4><p>Base, estructura si hace falta y color en gel hasta la cutícula. Aquí es donde se nota la técnica.</p></li>
+        <li class="step reveal"><span>06</span><h4>Sellado y cuidado</h4><p>Sellado, aceite de cutícula y pauta para casa para que aguante bonita hasta la próxima cita.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+<!-- ================= GALERÍA ================= -->
+<section class="section" id="galeria">
+  <div class="wrap">
+    <header class="shead shead--row">
+      <div>
+        <p class="kicker reveal">Galería</p>
+        <h2 class="reveal">Uñas hechas en el estudio</h2>
+      </div>
+      <p class="shead__text reveal">Rusas, gel, esculpidas y diseños. Toca cualquier foto para verla en grande.</p>
+    </header>
+
+    <div class="gallery">
+      <a class="shot shot--tall reveal" href="assets/fotos/gal-01.jpg" data-full="assets/fotos/gal-01.jpg"><img src="assets/fotos/gal-01.webp" alt="Manicura en rojo con anillos dorados" loading="lazy" decoding="async"><span class="shot__tag">Rojo clásico</span></a>
+      <a class="shot reveal" href="assets/fotos/gal-02.jpg" data-full="assets/fotos/gal-02.jpg"><img src="assets/fotos/gal-02.webp" alt="Uñas con francesa y acabado natural" loading="lazy" decoding="async"><span class="shot__tag">Francesa</span></a>
+      <a class="shot reveal" href="assets/fotos/gal-03.jpg" data-full="assets/fotos/gal-03.jpg"><img src="assets/fotos/gal-03.webp" alt="Manicura con anillo de perla" loading="lazy" decoding="async"><span class="shot__tag">Nude perlado</span></a>
+      <a class="shot shot--wide reveal" href="assets/fotos/gal-04.jpg" data-full="assets/fotos/gal-04.jpg"><img src="assets/fotos/gal-04.webp" alt="Manos con uñas decoradas y pulsera" loading="lazy" decoding="async"><span class="shot__tag">Nail art</span></a>
+      <a class="shot reveal" href="assets/fotos/gal-05.jpg" data-full="assets/fotos/gal-05.jpg"><img src="assets/fotos/gal-05.webp" alt="Uñas blancas con detalles rojos" loading="lazy" decoding="async"><span class="shot__tag">Blanco y rojo</span></a>
+      <a class="shot shot--tall reveal" href="assets/fotos/gal-06.jpg" data-full="assets/fotos/gal-06.jpg"><img src="assets/fotos/gal-06.webp" alt="Manicura larga con colgante" loading="lazy" decoding="async"><span class="shot__tag">Largo almendra</span></a>
+      <a class="shot reveal" href="assets/fotos/gal-07.jpg" data-full="assets/fotos/gal-07.jpg"><img src="assets/fotos/gal-07.webp" alt="Manos con manicura sobre vaquero" loading="lazy" decoding="async"><span class="shot__tag">Tonos tierra</span></a>
+      <a class="shot reveal" href="assets/fotos/gal-08.jpg" data-full="assets/fotos/gal-08.jpg"><img src="assets/fotos/gal-08.webp" alt="Uñas decoradas en exterior" loading="lazy" decoding="async"><span class="shot__tag">Verano</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SOBRE LILI ================= -->
+<section class="section section--deep" id="lili">
+  <div class="wrap about">
+    <figure class="about__figure reveal">
+      <img src="assets/lili.webp" alt="Lili, nail artist titulada en Madrid" width="576" height="1280" loading="lazy" decoding="async">
+    </figure>
+    <div class="about__copy">
+      <p class="kicker reveal">Quién te atiende</p>
+      <h2 class="reveal">Hola, soy Lili</h2>
+      <p class="reveal">Llevo <strong>más de 4 años</strong> dedicada a las uñas, formándome de manera continua y con <strong>títulos certificados</strong> en manicura rusa, gel y esculpidas. Trabajo con producto profesional y material esterilizado en cada cita, porque la parte que no se ve es la que hace que el resultado dure.</p>
+      <p class="reveal">Me gustan las uñas que se ven cuidadas de cerca, pero sobre todo me gusta que tú salgas con la sensación de que tu uña está sana. Si vienes con una idea, la ajustamos a tu uña real; si vienes sin idea, te propongo lo que mejor te quede.</p>
+      <ul class="about__list reveal">
+        <li>Técnica rusa con torno y cera</li>
+        <li>Formación continua y titulación certificada</li>
+        <li>Material esterilizado, un solo uso por clienta</li>
+        <li>Diagnóstico de tu uña antes de tocar nada</li>
+      </ul>
+      <a class="btn btn--gold reveal" data-wa="Hola Lili, quería pedir cita contigo." href="#reserva">Pedir cita con Lili</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ESTUDIO / A DOMICILIO ================= -->
+<section class="section" id="estudio">
+  <div class="wrap">
+    <header class="shead">
+      <p class="kicker reveal">Dónde</p>
+      <h2 class="reveal">En mi estudio o en tu casa</h2>
+      <p class="shead__text reveal">Trabajo con cita previa para dedicarte el tiempo que hace falta. Si te resulta más cómodo, llevo el material a tu domicilio.</p>
+    </header>
+    <div class="places">
+      <article class="place reveal">
+        <span class="place__tag">Estudio</span>
+        <h3>Calle San Clemente 8</h3>
+        <p class="place__city">Madrid</p>
+        <p>Mi espacio de trabajo: tranquilo, con luz y todo el material a mano. Ven con el tiempo justo: la cita es solo para ti.</p>
+        <a class="place__link" href="https://maps.google.com/?q=Calle+San+Clemente+8+Madrid" target="_blank" rel="noopener">Cómo llegar →</a>
+      </article>
+      <article class="place reveal">
+        <span class="place__tag">A domicilio</span>
+        <h3>Voy a tu casa</h3>
+        <p class="place__city">Servicio a domicilio en Madrid</p>
+        <p>Preparo la mesa, el torno y el material esterilizado. Tú solo tienes que elegir la serie. Perfecto para grupos, celebraciones o si no te apetece moverte.</p>
+        <a class="place__link" data-wa="Hola Lili, me interesa el servicio a domicilio. ¿Cómo funciona?" href="#reserva">Consultar a domicilio →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIOS ================= -->
+<section class="section section--deep" id="opiniones">
+  <div class="wrap">
+    <header class="shead">
+      <p class="kicker reveal">Opiniones</p>
+      <h2 class="reveal">Clientas que repiten</h2>
+    </header>
+    <div class="quotes">
+      <blockquote class="quote reveal">
+        <p>«Primera vez que me hacen una rusa sin que me duela nada y me han durado cuatro semanas perfectas.»</p>
+        <cite>Marta, uñas naturales</cite>
+      </blockquote>
+      <blockquote class="quote reveal">
+        <p>«Se nota que sabe lo que hace: me corrigió las crestas con kapping y por fin puedo llevar la uña larga.»</p>
+        <cite>Lucía, kapping</cite>
+      </blockquote>
+      <blockquote class="quote reveal">
+        <p>«Fue a casa con todo el material y salimos las cuatro arregladas. Un lujo.»</p>
+        <cite>Cristina, servicio a domicilio</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section" id="faq">
+  <div class="wrap faq">
+    <header class="shead">
+      <p class="kicker reveal">Dudas</p>
+      <h2 class="reveal">Preguntas frecuentes</h2>
+    </header>
+    <div class="faq__list">
+      <details class="faq__item reveal"><summary>¿Qué es exactamente la manicura rusa?</summary><p>Es una forma de preparar la uña: se trabaja en seco con torno eléctrico y fresas específicas, y se usa cera para exfoliar y limpiar la cutícula. Al dejar el borde limpio, el color llega hasta la cutícula y el acabado dura más.</p></details>
+      <details class="faq__item reveal"><summary>¿Duele o daña la uña?</summary><p>No debe doler. La técnica trabaja la capa superficial y la cutícula con fresas adecuadas, sin cortar piel sana y sin acetona agresiva. Si notas molestia, me lo dices y ajusto.</p></details>
+      <details class="faq__item reveal"><summary>¿Cuánto me va a durar?</summary><p>Con manicura rusa y gel, entre 3 y 4 semanas en buen estado. El mantenimiento recomendado es cada 3 o 4 semanas, según cuánto crezca tu uña.</p></details>
+      <details class="faq__item reveal"><summary>¿Qué diferencia hay entre kapping y esculpidas?</summary><p>El kapping refuerza tu uña natural sin alargarla. Las esculpidas construyen la uña con molde y gel para ganar largo y forma. En la cita miro tu uña y te digo cuál te conviene.</p></details>
+      <details class="faq__item reveal"><summary>¿Trabajas a domicilio?</summary><p>Sí, con cita previa y en Madrid. Llevo el torno, el material esterilizado y el producto. Si sois varias, lo organizamos en la misma visita.</p></details>
+      <details class="faq__item reveal"><summary>¿Cómo reservo y cuánto dura la cita?</summary><p>Me escribes por WhatsApp y te doy hueco. Una manicura rusa con gel ronda las 2 horas; esculpidas o diseños elaborados pueden llegar a las 2 horas y media. Te lo confirmo antes de reservar.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESERVA ================= -->
+<section class="section section--cta" id="reserva">
+  <div class="wrap cta">
+    <div class="cta__copy">
+      <p class="kicker reveal">Reserva</p>
+      <h2 class="reveal">Cuéntame qué necesitas</h2>
+      <p class="reveal">Rellena esto y te llega directo a mi WhatsApp con tus datos. Te contesto con huecos disponibles y te digo qué servicio te encaja mejor.</p>
+      <ul class="cta__list reveal">
+        <li>Cita previa, sin esperas</li>
+        <li>Estudio en Calle San Clemente 8 o a domicilio</li>
+        <li>Material esterilizado en cada cita</li>
+      </ul>
+      <div class="cta__direct reveal">
+        <a class="btn btn--gold" data-wa="Hola Lili, quería pedir cita." href="#">WhatsApp directo</a>
+        <a class="cta__phone" href="tel:+34681861137"><span>Llamar</span><b>681 861 137</b></a>
+      </div>
+    </div>
+    <form class="form reveal" id="form" novalidate>
+      <div class="form__row">
+        <label for="f-nombre">Nombre</label>
+        <input id="f-nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+      </div>
+      <div class="form__row">
+        <label for="f-tel">Teléfono</label>
+        <input id="f-tel" name="telefono" type="tel" placeholder="Tu teléfono" required>
+      </div>
+      <div class="form__row">
+        <label for="f-servicio">Qué te apetece</label>
+        <select id="f-servicio" name="servicio">
+          <option>Manicura rusa</option>
+          <option>Esmaltado semipermanente</option>
+          <option>Kapping o nivelación</option>
+          <option>Uñas esculpidas con gel</option>
+          <option>Polygel</option>
+          <option>Gel tips / extensiones</option>
+          <option>Diseño o nail art</option>
+          <option>Mantenimiento o retirada</option>
+          <option>Aún no lo sé, ayúdame</option>
+        </select>
+      </div>
+      <div class="form__row">
+        <label for="f-fecha">Cuándo te viene bien</label>
+        <input id="f-fecha" name="fecha" type="text" placeholder="Ej.: tardes de esta semana">
+      </div>
+      <div class="form__row">
+        <label for="f-msg">Algo más</label>
+        <textarea id="f-msg" name="mensaje" rows="3" placeholder="Cuéntame largo, forma, si es a domicilio..."></textarea>
+      </div>
+      <button class="btn btn--gold form__btn" type="submit">Enviar por WhatsApp</button>
+      <p class="form__legal">Al enviar se abre WhatsApp con tu mensaje ya escrito. No se guarda nada en esta web.</p>
+      <p class="form__ok" id="form-ok" hidden>Te he abierto WhatsApp con el mensaje listo. Si no se abre, escríbeme al 681 861 137.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap footer__wrap">
+    <div class="footer__brand">
+      <span class="nav__logo-main">LILI</span>
+      <span class="nav__logo-sub">estudio de uñas</span>
+      <p>Manicura rusa, uñas de gel y diseños a medida en Madrid. Cita previa.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Servicios</h4>
+      <a href="#servicios">Manicura rusa</a>
+      <a href="#servicios">Uñas de gel</a>
+      <a href="#rusa">Kapping y esculpidas</a>
+      <a href="#galeria">Galería</a>
+    </div>
+    <div class="footer__col">
+      <h4>Contacto</h4>
+      <a href="tel:+34681861137">681 861 137</a>
+      <a data-wa="Hola Lili, quería información." href="#">WhatsApp</a>
+      <span>Calle San Clemente 8, Madrid</span>
+      <span>Cita previa</span>
+    </div>
+    <div class="footer__col">
+      <h4>Legal</h4>
+      <a href="aviso-legal.html">Aviso legal</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="cookies.html">Cookies</a>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <p>© 2026 Estudio de uñas Lili. Todos los derechos reservados.</p>
+    <p>Madrid · Estudio y servicio a domicilio</p>
+  </div>
+</footer>
+
+<a class="wa-bubble" id="wa-bubble" href="#" aria-label="Escribir por WhatsApp">
+  <span class="wa-bubble__pulse" aria-hidden="true"></span>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.9-.3-2-.9-3-1.9s-1.6-2.1-1.9-3c-.2-.7-.2-1.2-.1-1.7.1-.5.7-1.6 1.2-1.8.3-.1.7-.1.9.1.2.2.7 1.2.7 1.4.1.2 0 .4-.1.6-.1.2-.3.4-.4.5-.1.2-.2.3-.1.5.3.6.8 1.2 1.3 1.6.5.4 1 .7 1.6.9.2.1.4 0 .5-.1.2-.2.4-.5.6-.7.2-.2.4-.2.6-.1.2.1 1.2.6 1.4.7.2.1.3.4.2.7Z"/></svg>
+  <span class="wa-bubble__txt">¿Hablamos?</span>
+</a>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__close" id="lightbox-close" aria-label="Cerrar">×</button>
+  <img id="lightbox-img" alt="">
+</div>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="app.js"></script>
+<script type="module" src="scene.js"></script>
+</body>
+</html>
