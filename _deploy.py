@@ -4,7 +4,7 @@ import json, os, re, sys, urllib.request, urllib.error
 
 HOME = os.path.expanduser("~")
 ORG = "Neolabs-clientes"
-REPO = "lili-nails-demo"
+REPO = "estudiolili"
 BRANCH = "main"
 URL = "https://neolabs-clientes.github.io/%s/" % REPO
 
