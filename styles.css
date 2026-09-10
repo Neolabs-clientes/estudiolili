@@ -481,5 +481,18 @@ main{position:relative;z-index:2}
 .legal .pend{color:var(--rose);font-size:13.4px;border:1px dashed rgba(201,120,138,.4);border-radius:10px;padding:12px 14px;margin:22px 0}
 @media (max-width:640px){.legal{padding:112px 0 70px}}
 
+/* ---------- orden de capas: el canvas nunca debe tapar el contenido ---------- */
+main{position:relative;z-index:2}
+.hero{position:relative;isolation:isolate}
+.hero__bg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.hero__bg #gl{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero__bg .gl-fallback{position:absolute;inset:0;z-index:0}
+.hero__wrap{position:relative;z-index:2}
+.hero__glow{z-index:1}
+.grain{z-index:5}
+/* el visor de galería se controla con el atributo hidden: hay que devolverle el display:none
+   (si no, la regla display:grid lo deja visible y tapa toda la página) */
+.lightbox[hidden]{display:none !important}
+
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 

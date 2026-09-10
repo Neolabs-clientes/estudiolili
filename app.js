@@ -120,30 +120,56 @@
     if (started) return;
     started = true;
     var gsapOk = typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined';
-    if (!gsapOk || reduce) {
-      document.querySelectorAll('.reveal').forEach(function (el) { el.style.opacity = 1; });
-      return;
-    }
+    if (!gsapOk || reduce) return;   // sin animacion: el contenido queda visible (CSS por defecto)
+
     gsap.registerPlugin(ScrollTrigger);
-    gsap.utils.toArray('.reveal').forEach(function (el) {
-      gsap.from(el, {
-        opacity: 0, y: 34, duration: 1, ease: 'power3.out',
-        scrollTrigger: { trigger: el, start: 'top 88%', once: true }
-      });
-    });
-    // hero
+
+    /* Hero: anima al cargar. fromTo + immediateRender:false => si algo falla,
+       el elemento se queda en su estado natural (visible), nunca oculto. */
     var hero = document.querySelector('.hero__copy');
     if (hero) {
-      gsap.from(hero.children, {
-        opacity: 0, y: 26, duration: 1.1, ease: 'power3.out',
-        stagger: 0.09, delay: 0.15
+      gsap.fromTo(hero.children, { opacity: 0, y: 26 }, {
+        opacity: 1, y: 0, duration: 1, ease: 'power3.out', stagger: 0.08, delay: 0.1,
+        immediateRender: false, overwrite: true
       });
     }
     var fig = document.querySelector('.hero__figure');
     if (fig) {
-      gsap.from(fig, { opacity: 0, scale: 0.94, duration: 1.4, ease: 'power3.out', delay: 0.3 });
+      gsap.fromTo(fig, { opacity: 0, scale: 0.95 }, {
+        opacity: 1, scale: 1, duration: 1.3, ease: 'power3.out', delay: 0.25,
+        immediateRender: false, overwrite: true
+      });
     }
-    ScrollTrigger.refresh();
+
+    /* Resto de la pagina: por lotes al entrar en pantalla */
+    var els = gsap.utils.toArray('.reveal').filter(function (el) { return !el.closest('.hero'); });
+    if (els.length) {
+      ScrollTrigger.batch(els, {
+        start: 'top 94%', once: true,
+        onEnter: function (batch) {
+          gsap.to(batch, {
+            opacity: 1, y: 0, duration: 0.95, ease: 'power3.out', stagger: 0.07, overwrite: true
+          });
+        },
+        onEnterBack: function (batch) {
+          gsap.to(batch, { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', overwrite: true });
+        }
+      });
+      gsap.set(els, { y: 34, opacity: 0 });
+      ScrollTrigger.refresh();
+    }
+
+    /* Red de seguridad: dentro de la ventana y aun invisible tras 2,5 s => mostrar sin animacion */
+    setTimeout(function () {
+      els.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        var dentro = r.top < window.innerHeight * 0.96 && r.bottom > 0;
+        if (dentro && parseFloat(getComputedStyle(el).opacity) < 0.06) {
+          el.style.opacity = 1;
+          el.style.transform = 'none';
+        }
+      });
+    }, 2500);
   }
 
   /* ---------- 8. año del pie ---------- */

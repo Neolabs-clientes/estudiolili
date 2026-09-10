@@ -12,6 +12,13 @@ const canvas = document.getElementById('gl');
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const MOBILE = window.matchMedia('(max-width: 820px)').matches;
 
+function heroBox() {
+  const bg = document.querySelector('.hero__bg');
+  const w = (bg && bg.clientWidth) ? bg.clientWidth : window.innerWidth;
+  const h = (bg && bg.clientHeight) ? bg.clientHeight : window.innerHeight;
+  return { w: Math.max(320, w), h: Math.max(320, h) };
+}
+
 function bail() {
   document.body.classList.remove('gl-on');
   document.body.classList.add('no-webgl');
@@ -40,12 +47,13 @@ function init() {
   } catch (e) { bail(); return; }
 
   const dpr = Math.min(window.devicePixelRatio || 1, MOBILE ? 1.75 : 2);
+  const box = heroBox();
   renderer.setPixelRatio(dpr);
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setSize(box.w, box.h);
   renderer.toneMapping = THREE.NoToneMapping;   // el OutputPass ya gestiona el color
 
   scene = new THREE.Scene();
-  camera = new THREE.PerspectiveCamera(48, window.innerWidth / window.innerHeight, 0.1, 100);
+  camera = new THREE.PerspectiveCamera(48, box.w / box.h, 0.1, 100);
   camera.position.set(0, 0, 7);
   clock = new THREE.Clock();
 
@@ -142,10 +150,11 @@ function init() {
   /* ---------- postproceso: bloom ---------- */
   composer = new EffectComposer(renderer);
   composer.setPixelRatio(dpr);
-  composer.setSize(window.innerWidth, window.innerHeight);
+  const cb = heroBox();
+  composer.setSize(cb.w, cb.h);
   composer.addPass(new RenderPass(scene, camera));
   const bloom = new UnrealBloomPass(
-    new THREE.Vector2(window.innerWidth, window.innerHeight),
+    new THREE.Vector2(cb.w, cb.h),
     MOBILE ? 0.42 : 0.58, 0.8, 0.7
   );
   composer.addPass(bloom);
@@ -171,7 +180,8 @@ function init() {
 
 function onResize() {
   if (!renderer) return;
-  const w = window.innerWidth, h = window.innerHeight;
+  const hb = heroBox();
+  const w = hb.w, h = hb.h;
   camera.aspect = w / h;
   camera.updateProjectionMatrix();
   renderer.setSize(w, h);
