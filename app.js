@@ -59,7 +59,7 @@
   /* ---------- 5. galería con lightbox ---------- */
   var lb = document.getElementById('lightbox');
   var lbImg = document.getElementById('lightbox-img');
-  document.querySelectorAll('.shot').forEach(function (shot) {
+  document.querySelectorAll('.shot, .cert').forEach(function (shot) {
     shot.addEventListener('click', function (e) {
       e.preventDefault();
       if (!lb || !lbImg) return;

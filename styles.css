@@ -493,6 +493,17 @@ main{position:relative;z-index:2}
 /* el visor de galería se controla con el atributo hidden: hay que devolverle el display:none
    (si no, la regla display:grid lo deja visible y tapa toda la página) */
 .lightbox[hidden]{display:none !important}
+/* certificado de formacion dentro de "Sobre Lili" (se amplia con el mismo visor) */
+.cert{
+  display:block;margin:24px 0 26px;max-width:320px;text-decoration:none;
+  border:1px solid rgba(217,179,130,.32);border-radius:14px;overflow:hidden;
+  background:rgba(255,255,255,.03);transition:border-color .25s ease,transform .25s ease;
+}
+.cert:hover,.cert:focus-visible{border-color:var(--gold);transform:translateY(-2px)}
+.cert img{display:block;width:100%;height:auto}
+.cert__cap{display:block;padding:10px 13px 12px;font-size:.79rem;line-height:1.45;color:var(--blush);opacity:.85}
+.cert__cap strong{color:var(--gold);font-weight:600;opacity:1}
+@media (max-width:820px){.cert{max-width:none}}
 /* el fondo 3D nunca debe comerse la legibilidad del titular */
 .hero__copy{position:relative;z-index:2}
 .hero__copy::before{
