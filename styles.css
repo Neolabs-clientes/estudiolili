@@ -493,6 +493,12 @@ main{position:relative;z-index:2}
 /* el visor de galería se controla con el atributo hidden: hay que devolverle el display:none
    (si no, la regla display:grid lo deja visible y tapa toda la página) */
 .lightbox[hidden]{display:none !important}
+/* el fondo 3D nunca debe comerse la legibilidad del titular */
+.hero__copy{position:relative;z-index:2}
+.hero__copy::before{
+  content:"";position:absolute;inset:-8% -16% -10% -10%;z-index:-1;pointer-events:none;
+  background:radial-gradient(58% 62% at 30% 46%, rgba(18,11,16,.88) 0%, rgba(18,11,16,.58) 46%, rgba(18,11,16,0) 78%);
+}
 
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 

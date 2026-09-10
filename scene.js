@@ -134,17 +134,17 @@ function init() {
         vec3 gold = vec3(0.97, 0.82, 0.60);
         vec3 rose = vec3(0.84, 0.44, 0.55);
         vec3 deep = vec3(0.20, 0.07, 0.13);
-        vec3 base = mix(deep, mix(rose, gold, grad), 0.9);
-        vec3 col = base + gold * f * 1.2;
+        vec3 base = mix(deep, mix(rose, gold, grad), 0.78);
+        vec3 col = base + gold * f * 0.72;
         vec3 ldir = normalize(vec3(sin(uTime * 0.3), 0.65, cos(uTime * 0.3)));
         float spec = pow(max(dot(vN, ldir), 0.0), 26.0);
-        col += vec3(1.0) * spec * 0.55;
+        col += vec3(1.0) * spec * 0.32;
         gl_FragColor = vec4(col, 1.0);
       }`
   });
   knot = new THREE.Mesh(new THREE.TorusKnotGeometry(1.04, 0.30, MOBILE ? 120 : 220, 28), km);
-  knot.position.set(MOBILE ? 0 : 2.05, MOBILE ? 0.9 : 0.15, -0.4);
-  knot.scale.setScalar(MOBILE ? 0.72 : 1);
+  knot.position.set(MOBILE ? 0 : 2.45, MOBILE ? -1.5 : -0.45, MOBILE ? -0.8 : -0.6);
+  knot.scale.setScalar(MOBILE ? 0.45 : 0.6);
   scene.add(knot);
 
   /* ---------- postproceso: bloom ---------- */
@@ -155,7 +155,7 @@ function init() {
   composer.addPass(new RenderPass(scene, camera));
   const bloom = new UnrealBloomPass(
     new THREE.Vector2(cb.w, cb.h),
-    MOBILE ? 0.42 : 0.58, 0.8, 0.7
+    MOBILE ? 0.30 : 0.36, 0.8, 0.78
   );
   composer.addPass(bloom);
   composer.addPass(new OutputPass());
@@ -188,8 +188,8 @@ function onResize() {
   if (composer) composer.setSize(w, h);
   if (knot) {
     const m = w < 820;
-    knot.position.set(m ? 0 : 2.05, m ? 0.9 : 0.15, -0.4);
-    knot.scale.setScalar(m ? 0.72 : 1);
+    knot.position.set(m ? 0 : 2.45, m ? -1.5 : -0.45, m ? -0.8 : -0.6);
+    knot.scale.setScalar(m ? 0.45 : 0.6);
   }
 }
 
@@ -205,7 +205,7 @@ function render(t) {
     knot.rotation.y = t * 0.16 + mouse.x * 0.25;
     knot.rotation.x = Math.sin(t * 0.22) * 0.18 + mouse.y * 0.16;
     knot.visible = fade > 0.02;
-    knot.scale.setScalar((window.innerWidth < 820 ? 0.72 : 1) * (0.85 + fade * 0.15));
+    knot.scale.setScalar((window.innerWidth < 820 ? 0.45 : 0.6) * (0.85 + fade * 0.15));
   }
   mouse.x += (mouse.tx - mouse.x) * 0.045;
   mouse.y += (mouse.ty - mouse.y) * 0.045;
