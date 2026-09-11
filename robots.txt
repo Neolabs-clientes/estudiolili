@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neolabs-clientes.github.io/estudiolili/sitemap.xml
